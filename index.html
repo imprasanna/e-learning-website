@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/0db2d59c5a.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <title>SkillUp</title>
+
+    <style>
+      .swiper-pagination-bullet {
+        height: 3px;
+        width: 23px;
+        border-radius: 25px;
+      }
+
+      .swiper-pagination-bullet-active {
+        background-color: #03b97c;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navbar__wrapper wrapper">
+        <img src="./images/logo.png" alt="logo" class="wrapper__logo" />
+        <ul class="wrapper__items">
+          <li onmouseover="dropdown1()" onmouseout="hide1()">
+            <span>Home</span>
+            <i class="fa-sharp fa-solid fa-caret-down"></i>
+            <div class="wrapper__items--dropdown" id="drop1">
+              <a href="#">Home 1</a>
+              <hr />
+              <a href="#">Home 2</a>
+              <hr />
+              <a href="#">Home 3</a>
+              <hr />
+              <a href="#">Home 4</a>
+              <hr />
+              <a href="#">Home 5</a>
+              <hr />
+              <a href="#">Home 6</a>
+            </div>
+          </li>
+          <li onmouseover="dropdown2()" onmouseout="hide2()">
+            <span>Courses</span>
+            <i class="fa-sharp fa-solid fa-caret-down"></i>
+            <div class="wrapper__items--dropdown" id="drop2">
+              <a href="#">Courses - Grid</a>
+              <hr />
+              <a href="#">Courses - List</a>
+              <hr />
+              <a href="#">Courses Details</a>
+              <hr />
+              <a href="#">Explore Categories</a>
+            </div>
+          </li>
+          <li onmouseover="dropdown3()" onmouseout="hide3()">
+            <span>Blog</span>
+            <i class="fa-sharp fa-solid fa-caret-down"></i>
+            <div class="wrapper__items--dropdown" id="drop3">
+              <a href="#">Blog Full</a>
+              <hr />
+              <a href="#">Blog Sidebar</a>
+              <hr />
+              <a href="#">Blog Detail</a>
+            </div>
+          </li>
+          <li>
+            <span>Shop</span>
+          </li>
+          <li onmouseover="dropdown4()" onmouseout="hide4()">
+            <span>Pages</span>
+            <i class="fa-sharp fa-solid fa-caret-down"></i>
+            <div class="wrapper__items--dropdown" id="drop4">
+              <a href="#">About Us</a>
+              <hr />
+              <a href="#">Contact Us</a>
+              <hr />
+              <a href="#">FAQ's</a>
+              <hr />
+              <a href="#">404</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <span class="navbar__button">
+        <i class="fa-solid fa-right-to-bracket"></i>
+        <span>Sign In</span>
+      </span>
+    </nav>
+
+    <!-- Body container 1 -->
+    <div class="body-container">
+      <div class="body-container__container1">
+        <div class="body-container__container1--text1">
+          LISTEN TO OUR NEW ANTHEM
+        </div>
+        <h1 class="body-container__container1--text2">
+          Find The Most Exciting Online Courses
+        </h1>
+        <p class="body-container__container1--text3">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore.
+        </p>
+        <div class="body-container__container1--search-box search-box">
+          <input
+            class="search-box__search-input"
+            type="text"
+            placeholder="Search Your Courses"
+          />
+          <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+          <button class="search-box__search-btn">Search</button>
+        </div>
+      </div>
+      <img
+        src="./images/illustration.png"
+        alt="illustration"
+        class="body-container__illustration"
+      />
+    </div>
+
+    <!-- Elements container -->
+    <div class="elements-container">
+      <div class="elements-container__element1">
+        <h1>4.8</h1>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <p>3,272 ratings</p>
+      </div>
+      <div class="element elements-container__element2">
+        <i class="fa-solid fa-layer-group"></i>
+        <span>Best Online Tutoring</span>
+      </div>
+      <div class="element elements-container__element3">
+        <i class="fa-solid fa-calendar-days"></i>
+        <span>Fully Lifetime Access</span>
+      </div>
+      <div class="element elements-container__element4">
+        <i class="fa-solid fa-user-shield"></i>
+        <span>800K+ Enrolled Students</span>
+      </div>
+      <div class="element elements-container__element5">
+        <i class="fa-solid fa-book-open-reader"></i>
+        <span>200+ Courses Available</span>
+      </div>
+    </div>
+
+    <!-- Carousel part -->
+    <div class="carousel-part" style="user-select: none">
+      <div class="carousel-part__description">
+        <h3 class="carousel-part__description--text">
+          Explore Featured <span>Courses</span>
+        </h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam.
+        </p>
+      </div>
+
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="./images/carousel-image1.png"
+              class="card-img"
+              alt="..."
+            />
+            <div class="carousel-card__body">
+              <div class="carousel-card__body--element-body card-body">
+                <span style="padding-bottom: 0" class="card-body__element1"
+                  >Development</span
+                >
+                <span class="card-body__element2">Free</span>
+              </div>
+              <div class="carousel-card__body--description">
+                Full Web Designing Course With 30 Web Template
+              </div>
+              <div class="carousel-card__body--element-body2 card-body2">
+                <i class="fa-solid fa-clock"></i>
+                <span class="card-body2__element1">12 Week</span>
+                <i class="fa-solid fa-video"></i>
+                <span class="card-body2__element2">3 Lessons</span>
+                <i class="fa-solid fa-signal"></i>
+                <span class="card-body2__element3">Intermediate</span>
+              </div>
+              <div class="carousel-card__body--footer card-footer">
+                <img
+                  src="./images/profile1.jpeg"
+                  alt=""
+                  class="card-footer__profile"
+                />
+                <div class="card-footer__sub-part">
+                  <i class="fa-solid fa-user"></i>
+                  <span class="card-footer__sub-part--element1">58</span>
+                  <i class="fa-solid fa-eye"></i>
+                  <span class="card-footer__sub-part--element2">1,571</span>
+                  <i class="fa-solid fa-star"></i>
+                  <span class="card-footer__sub-part--element3">3.2</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="./images/carousel-image2.png"
+              class="card-img"
+              alt="..."
+            />
+            <div class="carousel-card__body">
+              <div class="carousel-card__body--element-body card-body">
+                <span style="padding-bottom: 0" class="card-body__element1"
+                  >Health and Fitness</span
+                >
+                <span class="card-body__element2">$55</span>
+              </div>
+              <div class="carousel-card__body--description">
+                Fitness, Physical Education and Relation to Academic Performance
+              </div>
+              <div class="carousel-card__body--element-body2 card-body2">
+                <i class="fa-solid fa-clock"></i>
+                <span class="card-body2__element1">10 Week</span>
+                <i class="fa-solid fa-video"></i>
+                <span class="card-body2__element2">12 Lessons</span>
+                <i class="fa-solid fa-signal"></i>
+                <span class="card-body2__element3">Intermediate</span>
+              </div>
+              <div class="carousel-card__body--footer card-footer">
+                <img
+                  src="./images/profile5.jpeg"
+                  alt=""
+                  class="card-footer__profile"
+                />
+                <div class="card-footer__sub-part">
+                  <i class="fa-solid fa-user"></i>
+                  <span class="card-footer__sub-part--element1">1,050</span>
+                  <i class="fa-solid fa-eye"></i>
+                  <span class="card-footer__sub-part--element2">1,991</span>
+                  <i class="fa-solid fa-star"></i>
+                  <span class="card-footer__sub-part--element3">4.6</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="./images/carousel-image3.png"
+              class="card-img"
+              alt="..."
+            />
+            <div class="carousel-card__body">
+              <div class="carousel-card__body--element-body card-body">
+                <span style="padding-bottom: 0" class="card-body__element1"
+                  >Finance and Accounting</span
+                >
+                <span class="card-body__element2">Free</span>
+              </div>
+              <div class="carousel-card__body--description">
+                The Complete Business Plan Course Includes 10+ Template
+              </div>
+              <div class="carousel-card__body--element-body2 card-body2">
+                <i class="fa-solid fa-clock"></i>
+                <span class="card-body2__element1">6 Week</span>
+                <i class="fa-solid fa-video"></i>
+                <span class="card-body2__element2">15 Lessons</span>
+                <i class="fa-solid fa-signal"></i>
+                <span class="card-body2__element3">Intermediate</span>
+              </div>
+              <div class="carousel-card__body--footer card-footer">
+                <img
+                  src="./images/profile3.jpeg"
+                  alt=""
+                  class="card-footer__profile"
+                />
+                <div class="card-footer__sub-part">
+                  <i class="fa-solid fa-user"></i>
+                  <span class="card-footer__sub-part--element1">1,200</span>
+                  <i class="fa-solid fa-eye"></i>
+                  <span class="card-footer__sub-part--element2">2,565</span>
+                  <i class="fa-solid fa-star"></i>
+                  <span class="card-footer__sub-part--element3">4.1</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="./images/carousel-image4.png"
+              class="card-img"
+              alt="..."
+            />
+            <div class="carousel-card__body">
+              <div class="carousel-card__body--element-body card-body">
+                <span style="padding-bottom: 0" class="card-body__element1"
+                  >Development</span
+                >
+                <span class="card-body__element2">$65</span>
+              </div>
+              <div class="carousel-card__body--description">
+                Full Web Designing Course With 30 Web Template
+              </div>
+              <div class="carousel-card__body--element-body2 card-body2">
+                <i class="fa-solid fa-clock"></i>
+                <span class="card-body2__element1">12 Week</span>
+                <i class="fa-solid fa-video"></i>
+                <span class="card-body2__element2">3 Lessons</span>
+                <i class="fa-solid fa-signal"></i>
+                <span class="card-body2__element3">Intermediate</span>
+              </div>
+              <div class="carousel-card__body--footer card-footer">
+                <img
+                  src="./images/profile2.jpeg"
+                  alt=""
+                  class="card-footer__profile"
+                />
+                <div class="card-footer__sub-part">
+                  <i class="fa-solid fa-user"></i>
+                  <span class="card-footer__sub-part--element1">58</span>
+                  <i class="fa-solid fa-eye"></i>
+                  <span class="card-footer__sub-part--element2">1,571</span>
+                  <i class="fa-solid fa-star"></i>
+                  <span class="card-footer__sub-part--element3">3.2</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="./images/carousel-image5.png"
+              class="card-img"
+              alt="..."
+            />
+            <div class="carousel-card__body">
+              <div class="carousel-card__body--element-body card-body">
+                <span style="padding-bottom: 0" class="card-body__element1"
+                  >Development</span
+                >
+                <span class="card-body__element2">$99</span>
+              </div>
+              <div class="carousel-card__body--description">
+                Full Web Designing Course With 30 Web Template
+              </div>
+              <div class="carousel-card__body--element-body2 card-body2">
+                <i class="fa-solid fa-clock"></i>
+                <span class="card-body2__element1">12 Week</span>
+                <i class="fa-solid fa-video"></i>
+                <span class="card-body2__element2">3 Lessons</span>
+                <i class="fa-solid fa-signal"></i>
+                <span class="card-body2__element3">Intermediate</span>
+              </div>
+              <div class="carousel-card__body--footer card-footer">
+                <img
+                  src="./images/profile6.jpeg"
+                  alt=""
+                  class="card-footer__profile"
+                />
+                <div class="card-footer__sub-part">
+                  <i class="fa-solid fa-user"></i>
+                  <span class="card-footer__sub-part--element1">58</span>
+                  <i class="fa-solid fa-eye"></i>
+                  <span class="card-footer__sub-part--element2">1,571</span>
+                  <i class="fa-solid fa-star"></i>
+                  <span class="card-footer__sub-part--element3">3.2</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="./images/carousel-image6.png"
+              class="card-img"
+              alt="..."
+            />
+            <div class="carousel-card__body">
+              <div class="carousel-card__body--element-body card-body">
+                <span style="padding-bottom: 0" class="card-body__element1"
+                  >Development</span
+                >
+                <span class="card-body__element2">Free</span>
+              </div>
+              <div class="carousel-card__body--description">
+                Full Web Designing Course With 30 Web Template
+              </div>
+              <div class="carousel-card__body--element-body2 card-body2">
+                <i class="fa-solid fa-clock"></i>
+                <span class="card-body2__element1">2 Week</span>
+                <i class="fa-solid fa-video"></i>
+                <span class="card-body2__element2">4 Lessons</span>
+                <i class="fa-solid fa-signal"></i>
+                <span class="card-body2__element3">Easy</span>
+              </div>
+              <div class="carousel-card__body--footer card-footer">
+                <img
+                  src="./images/profile4.jpeg"
+                  alt=""
+                  class="card-footer__profile"
+                />
+                <div class="card-footer__sub-part">
+                  <i class="fa-solid fa-user"></i>
+                  <span class="card-footer__sub-part--element1">58</span>
+                  <i class="fa-solid fa-eye"></i>
+                  <span class="card-footer__sub-part--element2">1,571</span>
+                  <i class="fa-solid fa-star"></i>
+                  <span class="card-footer__sub-part--element3">3.2</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <!-- Categories container -->
+    <div class="categories-container">
+      <div class="categories__headingbox">
+        <h2 class="categorgies__headingbox--heading">
+          Select Your <span>Categories</span>
+        </h2>
+        <p class="categorgies__headingbox--paragraph">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam.
+        </p>
+      </div>
+
+      <div class="categories__cardbox">
+        <div class="categories__cardbox--card card1">
+          <div class="card1__coursenav">
+            <i class="fa-sharp fa-solid fa-code"></i>
+            <a href="#"
+              >View Cources <i class="fa-solid fa-angles-right"></i
+            ></a>
+          </div>
+          <div class="card1__coursedescription">
+            <h4>Development</h4>
+            <p>3 Courses</p>
+          </div>
+        </div>
+
+        <div class="categories__cardbox--card card1">
+          <div class="card1__coursenav">
+            <i class="fa-solid fa-window-restore"></i>
+            <a href="#"
+              >View Cources <i class="fa-solid fa-angles-right"></i
+            ></a>
+          </div>
+          <div class="card1__coursedescription">
+            <h4>Web Designing</h4>
+            <p>6 Courses</p>
+          </div>
+        </div>
+
+        <div class="categories__cardbox--card card1">
+          <div class="card1__coursenav">
+            <i class="fa-sharp fa-solid fa-leaf"></i>
+            <a href="#"
+              >View Cources <i class="fa-solid fa-angles-right"></i
+            ></a>
+          </div>
+          <div class="card1__coursedescription">
+            <h4>Lifestyle</h4>
+            <p>4 Courses</p>
+          </div>
+        </div>
+
+        <div class="categories__cardbox--card card1">
+          <div class="card1__coursenav">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <a href="#"
+              >View Cources <i class="fa-solid fa-angles-right"></i
+            ></a>
+          </div>
+          <div class="card1__coursedescription">
+            <h4>Health & Fitness</h4>
+            <p>2 Courses</p>
+          </div>
+        </div>
+
+        <div class="categories__cardbox--card card1">
+          <div class="card1__coursenav">
+            <i class="fa fa-laptop"></i>
+            <a href="#"
+              >View Cources <i class="fa-solid fa-angles-right"></i
+            ></a>
+          </div>
+          <div class="card1__coursedescription">
+            <h4>IT & Software</h4>
+            <p>2 Courses</p>
+          </div>
+        </div>
+
+        <div class="categories__cardbox--card card1">
+          <div class="card1__coursenav">
+            <i class="fa fa-photo-video"></i>
+            <a href="#"
+              >View Cources <i class="fa-solid fa-angles-right"></i
+            ></a>
+          </div>
+          <div class="card1__coursedescription">
+            <h4>Photography</h4>
+            <p>1 Course</p>
+          </div>
+        </div>
+
+        <div class="categories__cardbox--card card1">
+          <div class="card1__coursenav">
+            <i class="fa fa-stamp"></i>
+            <a href="#"
+              >View Cources <i class="fa-solid fa-angles-right"></i
+            ></a>
+          </div>
+          <div class="card1__coursedescription">
+            <h4>Finance & Accounting</h4>
+            <p>3 Courses</p>
+          </div>
+        </div>
+
+        <div class="categories__cardbox--card card1">
+          <div class="card1__coursenav">
+            <i class="fa fa-briefcase"></i>
+            <a href="#"
+              >View Cources <i class="fa-solid fa-angles-right"></i
+            ></a>
+          </div>
+          <div class="card1__coursedescription">
+            <h4>Medical</h4>
+            <p>0 Courses</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Instructors container -->
+    <div class="instructors-container">
+      <div class="instructors__headingbox">
+        <h2 class="instructors__headingbox--heading">
+          Our Top <span>Instructors</span>
+        </h2>
+        <p class="instructors__headingbox--paragraph">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam.
+        </p>
+      </div>
+
+      <div class="instructors__cardbox">
+        <div class="instructors__cardbox--card instructorsCard">
+          <img
+            src="images/instructor1.jpeg"
+            alt=""
+            srcset=""
+            class="instructorsCard__img"
+          />
+          <h3 class="instructorsCard__name">Adam Riky</h3>
+          <div class="instructorsCard__rolled">
+            <i class="fa fa-user text-theme"></i>
+            <p>7 Enrolled</p>
+          </div>
+          <a href="#" class="instructorsCard__btn">Enroll Now</a>
+        </div>
+
+        <div class="instructors__cardbox--card instructorsCard">
+          <img
+            src="images/instructor2.jpeg"
+            alt=""
+            srcset=""
+            class="instructorsCard__img"
+          />
+          <h3 class="instructorsCard__name">David Garza</h3>
+          <div class="instructorsCard__rolled">
+            <i class="fa fa-user text-theme"></i>
+            <p>50 Enrolled</p>
+          </div>
+          <a href="#" class="instructorsCard__btn">Enroll Now</a>
+        </div>
+
+        <div class="instructors__cardbox--card instructorsCard">
+          <img
+            src="images/instructor3.jpeg"
+            alt=""
+            srcset=""
+            class="instructorsCard__img"
+          />
+          <h3 class="instructorsCard__name">John Doe</h3>
+          <div class="instructorsCard__rolled">
+            <i class="fa fa-user text-theme"></i>
+            <p>4 Enrolled</p>
+          </div>
+          <a href="#" class="instructorsCard__btn">Enroll Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reviews container -->
+    <div class="reviews-container">
+        <div class="reviews-container__header">
+            <div class="reviews-container__header--heading">Our Students <span>Reviews</span></div>
+            <div class="reviews-container__header--par">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+            </div>
+        </div>
+      <!-- Swiper -->
+      <div class="swiper mySwiper swiper2">
+        <div class="swiper-wrapper">
+          <div style="background-color: white; border: 0; padding: 1.5rem;" class="swiper-slide">
+            <div class="user-img-review">
+                <img style="border-radius: 100%;" width="80px" src="./images/user1.jpg">
+                <div class="user-details-review">
+                    <span class="user-name">Robert Fox</span>
+                    <span style="font-weight: 100;">Linkedin Leader</span>
+                    <span class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>5.0</span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="swiper-review-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam harum accusamus non adipisci tempore molestiae!</div>
+          </div>
+          <div style="background-color: white; border: 0; padding: 1.5rem;" class="swiper-slide">
+            <div class="user-img-review">
+                <img style="border-radius: 100%;" width="80px" src="./images/user2.png">
+                <div class="user-details-review">
+                    <span class="user-name">Louis Hemilton</span>
+                    <span style="font-weight: 100;">Linkedin Leader</span>
+                    <span class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>4.5</span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="swiper-review-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam harum accusamus non adipisci tempore molestiae!</div>
+          </div>
+          <div style="background-color: white; border: 0; padding: 1.5rem;" class="swiper-slide">
+            <div class="user-img-review">
+                <img style="border-radius: 100%;" width="80px" src="./images/user1.jpg">
+                <div class="user-details-review">
+                    <span class="user-name">Mary White</span>
+                    <span style="font-weight: 100;">Linkedin Leader</span>
+                    <span class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>4.0</span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="swiper-review-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam harum accusamus non adipisci tempore molestiae!</div>
+          </div>
+          <div style="background-color: white; border: 0; padding: 1.5rem;" class="swiper-slide">
+            <div class="user-img-review">
+                <img style="border-radius: 100%;" width="80px" src="./images/user3.jpg">
+                <div class="user-details-review">
+                    <span class="user-name">Robert Fox</span>
+                    <span style="font-weight: 100;">Linkedin Leader</span>
+                    <span class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>5.0</span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="swiper-review-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam harum accusamus non adipisci tempore molestiae!</div>
+          </div>
+          <div style="background-color: white; border: 0; padding: 1.5rem;" class="swiper-slide">
+            <div class="user-img-review">
+                <img style="border-radius: 100%;" width="80px" src="./images/user1.jpg">
+                <div class="user-details-review">
+                    <span class="user-name">Cristina Mary</span>
+                    <span style="font-weight: 100;">Linkedin Leader</span>
+                    <span class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>4.5</span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="swiper-review-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam harum accusamus non adipisci tempore molestiae!</div>
+          </div>
+          <div style="background-color: white; border: 0; padding: 1.5rem;" class="swiper-slide">
+            <div class="user-img-review">
+                <img style="border-radius: 100%;" width="80px" src="./images/user2.png">
+                <div class="user-details-review">
+                    <span class="user-name">Robert Fox</span>
+                    <span style="font-weight: 100;">Linkedin Leader</span>
+                    <span class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>4.5</span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="swiper-review-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam harum accusamus non adipisci tempore molestiae!</div>
+          </div>
+          <div style="background-color: white; border: 0; padding: 1.5rem;" class="swiper-slide">
+            <div class="user-img-review">
+                <img style="border-radius: 100%;" width="80px" src="./images/user3.jpg">
+                <div class="user-details-review">
+                    <span class="user-name">Jack Rider</span>
+                    <span style="font-weight: 100;">Linkedin Leader</span>
+                    <span class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>4.5</span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="swiper-review-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam harum accusamus non adipisci tempore molestiae!</div>
+          </div>
+          <div style="background-color: white; border: 0; padding: 1.5rem;" class="swiper-slide">
+            <div class="user-img-review">
+                <img style="border-radius: 100%;" width="80px" src="./images/user2.png">
+                <div class="user-details-review">
+                    <span class="user-name">Roberto Carlos</span>
+                    <span style="font-weight: 100;">Linkedin Leader</span>
+                    <span class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>4.5</span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="swiper-review-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam harum accusamus non adipisci tempore molestiae!</div>
+          </div>
+          <div style="background-color: white; border: 0; padding: 1.5rem;" class="swiper-slide">
+            <div class="user-img-review">
+                <img style="border-radius: 100%;" width="80px" src="./images/user3.jpg">
+                <div class="user-details-review">
+                    <span class="user-name">Adam Ricky</span>
+                    <span style="font-weight: 100;">Linkedin Leader</span>
+                    <span class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>4.5</span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="swiper-review-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam harum accusamus non adipisci tempore molestiae!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Download container -->
+    <div class="download-container">
+      <div class="download">
+        <div class="download__txtbox">
+          <h2 class="download__txtbox--heading">Get The Learning App</h2>
+          <p class="download__txtbox--paragraph">
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui
+            blanditiis praesentium voluptatum deleniti atque corrupti quos
+            dolores et quas molestias excepturi sint occaecati cupiditate non
+            provident, similique sunt in culpa qui officia deserunt mollitia
+            animi, id est laborum et dolorum fuga.
+          </p>
+
+          <a href="#" class="download__txtbox--btn">
+            <div class="downloadbtn downloadbtn1">
+              <img src="images/apple.png" alt="" class=".downloadbtn__icon" />
+              <div class="downloadbtn__txt">
+                <h3>Download On The</h3>
+                <h2>App Store</h2>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="download__txtbox--btn">
+            <div class="downloadbtn downloadbtn2">
+              <img
+                src="images/google-play.png"
+                alt=""
+                class=".downloadbtn__icon"
+              />
+              <div class="downloadbtn__txt">
+                <h3>Get It On</h3>
+                <h2>Google Play</h2>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="download__imgbox">
+          <img src="images/near-footer-image.png" alt="" srcset="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact container -->
+    <div class="contact-container">
+      <div class="contact">
+        <div class="contact__txtbox">
+          <h1 class="contact__txtbox--heading">Do You Have Questions ?</h1>
+          <p class="contact__txtbox--paragraph">
+            We’ll help you to grow your career and growth.
+          </p>
+        </div>
+        <a href="#" class="contact__btn">Contact Us Today</a>
+      </div>
+    </div>
+
+    <!-- Footer container -->
+    <footer class="footer-container">
+      <div class="footer">
+        <div class="footer__main">
+          <img src="./images/logo2.png" alt="logo" class="footer--logo" />
+          <h1 class="footer__heading">
+            Do You Need Help With <br />
+            Anything?
+          </h1>
+          <p class="footer__paragraph">
+            Receive updates, hot deals, tutorials, discounts sent straignt in
+            your inbox every month
+          </p>
+          <div class="subscription">
+            <input type="text" placeholder="Email Address" />
+            <a href="#" class="footerbtn">Subscribe</a>
+          </div>
+        </div>
+        <div class="footer__sub">
+          <div class="footer__sub--links footerlinks">
+            <h2 class="footerlinks__heading">Courses List</h2>
+            <a href="#" class="footercourses__links">Lifestyle</a>
+            <a href="#" class="footercourses__links">Marketing</a>
+            <a href="#" class="footercourses__links">Development</a>
+            <a href="#" class="footercourses__links">Health & Fitness</a>
+            <a href="#" class="footercourses__links">IT & Software</a>
+            <a href="#" class="footercourses__links">Photography</a>
+          </div>
+
+          <div class="footer__sub--links footerlinks">
+            <h2 class="footerlinks__heading">Helpful Articles</h2>
+            <a href="#" class="footercourses__links">Accounting</a>
+            <a href="#" class="footercourses__links">Business</a>
+            <a href="#" class="footercourses__links">Marketing</a>
+            <a href="#" class="footercourses__links">Sign In</a>
+            <a href="#" class="footercourses__links">Our Services</a>
+            <a href="#" class="footercourses__links">About Us</a>
+          </div>
+
+          <div class="footer__sub--links footerlinks">
+            <h2 class="footerlinks__heading">Quick Links</h2>
+            <a href="#" class="footercourses__links">Blog</a>
+            <a href="#" class="footercourses__links">Shop</a>
+            <a href="#" class="footercourses__links">FAQ's</a>
+            <a href="#" class="footercourses__links">About Us</a>
+            <a href="#" class="footercourses__links">Contact Us</a>
+            <a href="#" class="footercourses__links">Pricing</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/0db2d59c5a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
